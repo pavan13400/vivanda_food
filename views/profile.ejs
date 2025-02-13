@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../profile.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="profile-pic-container">
+                <input type="file" id="profile-pic-input" accept="image/*" hidden>
+                <label for="profile-pic-input" class="profile-pic">
+                    <span class="upload-text">+</span>
+                </label>
+            </div>
+            <h2 id="username"><span id="user-data">Adi</span></h2>
+        </div>
+
+        <!-- User Info -->
+        <div class="user-info">
+            <p id="address">Address: <span id="address-value">123 Main St, City, Country</span>
+                <br>
+                <br>
+                <button class="edit-btn" id="edit-address">Edit Address</button>
+            </p>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <h3>Your Stats</h3>
+            <ul>
+                <li>Stars Earned: <span id="stars-earned">50</span> ⭐</li>
+                <li>People Helped: <span id="people-helped">25</span></li>
+            </ul>
+        </div>
+
+        <!-- Edit Section (Hidden initially) -->
+        <div class="edit-section" id="edit-section">
+            <label for="new-address">New Address:</label>
+            <input type="text" id="new-address" placeholder="Enter new address">
+            <button id="save-address">Save Address</button>
+            <button id="cancel-edit">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>

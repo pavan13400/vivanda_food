@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Food</title>
+  <link rel="stylesheet" href="donate.css">
+</head>
+<body>
+  <h1>VIVANDA</h1>
+  <nav>
+    <a href="about.ejs">About Us</a>
+    <a href="contact.ejs">Contact Us</a>
+    <a href="home.ejs" id="homeBtn">Home</a>
+    <a href="profile.ejs">Profile</a>
+  </nav>
+
+  <div id="donateSection">
+    <h2>Donate Food</h2>
+    <p>Your generosity can make a big difference! Please fill out the details below:</p>
+
+    <form id="donationForm">
+      <!-- Food Quantity -->
+      <label for="foodQuantity">Food Quantity (in kgs):</label>
+      <input type="number" id="foodQuantity" placeholder="Enter quantity" required>
+      <br>
+
+      <!-- Freshness of Food -->
+      <label for="foodFreshness">Freshness of Food:</label>
+      <select id="foodFreshness" required>
+        <option value="">Select Freshness</option>
+        <option value="Fresh">Fresh</option>
+        <option value="1 Day Old">1 Day Old</option>
+        <option value="2+ Days Old">2+ Days Old</option>
+      </select>
+      <br>
+
+      <!-- Donation Address -->
+      <label for="donationAddress">Address:</label>
+      <textarea id="donationAddress" placeholder="Enter your address here..." rows="4" required></textarea>
+      <br>
+
+      <button type="submit" id="donateBtn">Donate</button>
+    </form>
+
+    <p id="donationSuccess" style="color: green; display: none; margin-top: 10px;">
+      Thank you for your donation! We'll contact you shortly.<br>you've gained 10 stars⭐!!
+    </p>
+  </div>
+</body>
+</html>

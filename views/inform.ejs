@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inform Section</title>
+  <link rel="stylesheet" href="inform.css">
+</head>
+<body>
+  <h1>VIVANDA</h1>
+  <nav>
+    <a href="about.ejs">About Us</a>
+    <a href="contact.ejs">Contact Us</a>
+    <a href="home.ejs" id="homeBtn">Home</a>
+    <a href="profile.ejs">Profile</a>
+  </nav>
+  <h2>Inform Us</h2>
+
+  <div id="informSection">
+    <form id="informForm">
+      <!-- Address Input -->
+      <label for="address">Address:</label>
+      <textarea id="address" rows="4" placeholder="Enter address here..." required></textarea>
+      <br>
+
+      <!-- File Input for Photo -->
+      <label for="photo">Upload Photo:</label>
+      <input type="file" id="photo" accept="image/*" required>
+      <br>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Information</button>
+    </form>
+    
+    <p id="informSuccess" style="color: green; display: none;">Information has been submitted successfully!<br>Congratulations you have earned 5 stars &#9733</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order</title>
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+  <div id="orderSection">
+    <h1>Order Items</h1>
+    <p>Choose the type of item you want to order:</p>
+
+    <div id="orderOptions">
+      <!-- Medicine Option -->
+      <div class="orderOption" id="cs">
+        <h3>Medicine</h3>
+        <p>Order essential medicines delivered to your doorstep.</p>
+        <button onclick="showForm('Medicine')">Order Medicine</button>
+      </div>
+
+      <!-- Food Option -->
+      <div class="orderOption" id="cs">
+        <h3>Food</h3>
+        <p>Order fresh food items for immediate delivery.</p>
+        <button onclick="showForm('Food')">Order Food</button>
+      </div>
+
+      <!-- Groceries Option -->
+      <div class="orderOption" id="cs">
+        <h3>Groceries</h3>
+        <p>Order daily essentials and groceries quickly.</p>
+        <button onclick="showForm('Groceries')">Order Groceries</button>
+      </div>
+    </div>
+
+    <h1 id="cs">Coming Soon...</h1>
+  </div>
+</body>
+</html>
