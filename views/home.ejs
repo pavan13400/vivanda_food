@@ -1,33 +1,40 @@
 <%- include('partials/header') %>
-  <body>
-    <header>
-      <h1 align="center">VIVANDA</h1>
-    <nav>
-      <a href="/home" id="homeBtn">Home</a>
-      <a href="/about">About Us</a>
-      <a href="/contact">Contact Us</a>
-    <div>
-      <a class="register" href="/register" role="button">Register</a>
-      <a class="login" href="/login" role="button">Login</a>
-    </div>
-    </nav>
+<header>
+    <div class="heading">VIVANDA</div>
+  <nav class="nav-bar">
+    <a href="/home" id="homeBtn">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact Us</a>
+  <div>
+    <%  if(locals.username){  %>
+      <a href="/profile">Profile</a>
+      <% } else {%>
+        <a class="register" href="/register" role="button">Register</a>
+        <a class="login" href="/login" role="button">Login</a>
+        <%} %>
+  </div>
+  </nav>
   </header>
-
-  <%- include('login') %>
-
-  <div id="donateSection" style="display:none;">
-    <a href="donate.ejs">Donate</a>
-    <p>Have some surplus food? Click here to donate.</p>
-  </div>
-
-  <div id="orderSection" style="display:none;">
-    <a href="order.ejs">Order</a>
-    <p>Too busy to go buy essentials? Click here to buy groceries, food or medicine.</p>
-  </div>
-
-  <div id="informSection" style="display:none;">
-    <a href="inform.ejs">Inform</a>
-    <p>Found people who need help? Click here to inform others.</p>
-  </div>
-  <div id="quote">"Food is not just a necessity; it is a gift that should never be wasted."</div>
+  <body>
+  <!-- <%- include('login') %> -->
+   <div class="hero">
+    <div id="donateSection" style="display:none;">
+      <a href="donate.ejs">Donate</a>
+      <p>Have some surplus food? Click here to donate.</p>
+    </div>
+  
+    <div id="orderSection" style="display:none;">
+      <a href="order.ejs">Order</a>
+      <p>Too busy to go buy essentials? Click here to buy groceries, food or medicine.</p>
+    </div>
+  
+    <div id="informSection" style="display:none;">
+      <a href="inform.ejs">Inform</a>
+      <p>Found people who need help? Click here to inform others.</p>
+    </div>
+    <div id="quote">"Food is not just a necessity; it is a gift that should never be wasted."</div>
+   </div>
+   <main>
+  <img src="../images/images.jpg" height="300" width="300"><img> 
+</main>
 </body>

@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
+    <%- include('partials/header') %>
     <div class="container">
         <!-- Profile Header -->
         <div class="profile-header">
@@ -19,15 +21,15 @@
                     <span class="upload-text">+</span>
                 </label>
             </div>
-            <h2 id="username"><span id="user-data">Adi</span></h2>
+            <h2> Hello <%= username %></h2>
         </div>
 
         <!-- User Info -->
         <div class="user-info">
-            <p id="address">Address: <span id="address-value">123 Main St, City, Country</span>
+                <p id="address" > Address:<span id="address-value"></span> You stay in <%= address %></p>
                 <br>
                 <br>
-                <button class="edit-btn" id="edit-address">Edit Address</button>
+                <a href="/editaddress" class="edit-btn" id="edit-address" role="button">Change Address</a>
             </p>
         </div>
 
@@ -35,8 +37,8 @@
         <div class="stats">
             <h3>Your Stats</h3>
             <ul>
-                <li>Stars Earned: <span id="stars-earned">50</span> ⭐</li>
-                <li>People Helped: <span id="people-helped">25</span></li>
+                <li>Stars Earned: <span id="stars-earned"><%=stars %></span> ⭐</li>
+                <li>People Helped: <span id="people-helped"><%=helped %></span></li>
             </ul>
         </div>
 

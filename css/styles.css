@@ -23,9 +23,16 @@
     color: white;
   }
   
+  header > .heading{
+    padding: 10px;
+    margin: 10px;
+    margin-top:5px;
+    float: left;
+    
+  }
   /* Navigation Bar */
   nav {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    /* background: rgba(0, 0, 0, 0.6); Semi-transparent black */
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -33,6 +40,7 @@
     width: 100%;
     max-width: 800px;
     margin-bottom: 20px;
+    margin-right: 10px;
   }
   
   nav a {
