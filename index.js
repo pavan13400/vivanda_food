@@ -1,11 +1,10 @@
 import express from "express";
 import pg from "pg";
 import bodyParser from "body-parser";
-// import env from "dotenv";
 
 const app = express();
 const port = 3000;
-// env.config();
+
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -22,12 +21,12 @@ const pool = new Pool({
 export default pool;
 
 
-try {
-    const res = await pool.query('select * from food_users');
-    console.log('Connected at:', res.rows[0]);
-  } catch (err) {
-    console.error('Connection error:', err);
-  }
+// try {
+//     const res = await pool.query('select * from food_users');
+//     console.log('Connected at:', res.rows[0]);
+//   } catch (err) {
+//     console.error('Connection error:', err);
+//   }
   
 // const db =  new pg.Client({
 //     user: process.env.PG_USER,
@@ -100,12 +99,11 @@ app.post("/login", async(req,res)=>{
             const user_star = user.stars;
             const user_helped = user.people_helped;
             if(storedPassword== password){
-                res.render("profile.ejs",{username:user1,address:user_address,stars:user_star,helped:user_helped});
+                // res.render("profile.ejs",{username:user1,address:user_address,stars:user_star,helped:user_helped});
                 res.render("home.ejs",{username:user1,address:user_address,stars:user_star,helped:user_helped});
             }else{
                 res.render("login.ejs");
             }
-
         }else{
             res.render("login.ejs");
         }
@@ -113,7 +111,3 @@ app.post("/login", async(req,res)=>{
         console.log("error occurred");
     }
 })
-
-
-
-
